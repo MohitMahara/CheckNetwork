@@ -1,0 +1,154 @@
+/* import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&family=Poppins:wght@400;500&family=Potta+One&family=Roboto&family=Roboto+Mono:ital,wght@1,600&family=Rubik+Bubbles&family=Ubuntu+Condensed&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #E3F2FD;
+}
+
+.header{
+    text-align: center;
+    padding-block: 5vw;
+}
+
+.header-heading{
+    font-size: 3rem;
+    font-family: 'Potta One', cursive;
+    text-shadow:0 15px 25px rgba(52, 87, 220, 0.1) ;
+}
+
+.header p{
+    font-family: 'Potta One', cursive;
+    font-size: 1rem;
+}
+
+.header i{
+    color: #2ECC71;
+}
+
+
+.popup {
+    width: 40vw;
+    border-radius: 5px;
+    padding: 1vw 4vw 2vw;
+    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(52, 87, 220, 0.1);
+    border-top: 2px solid #EA4D67;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition: all 0.2s ease;
+    z-index: 1000;
+}
+
+.popup.show {
+    top: 0;
+    visibility: visible;
+}
+
+
+.popup.online {
+    border-color: #2ECC71;
+}
+
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 1vw;
+}
+
+
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #EA4D67;
+}
+
+.icon i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #2ECC71;
+    visibility: hidden;
+    color: white;
+}
+
+
+.title {
+
+    font-size: 1.2rem;
+}
+
+.desc {
+    font-size: 1.05rem;
+    color: #474747;
+    margin: 3px 0 10px;
+}
+
+.reconnect {
+    border: none;
+    padding: 0.5vw 1.5vw;
+    background-color: #5372F0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.9rem;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.reconnect:hover {
+    background-color: #3960fa;
+}
+
+.popup.online .reconnect{
+    background-color:#bfbfbf;
+    pointer-events: none;
+}
+
+
+
+/* media querys */
+
+@media screen and (max-width:768px) {
+    
+.popup{
+    width: 60vw;
+}
+
+}
+
+/* media query for phones */
+
+@media screen and (max-width:425px) {
+
+    .popup{
+        width: 90vw;
+    }
+
+    .desc{
+        font-size: 0.9rem;
+    }
+
+    .reconnect{
+        padding: 1vw 1.5vw;
+    }
+}
